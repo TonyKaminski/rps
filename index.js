@@ -3,14 +3,13 @@ let computerSelection
 
 function getComputerChoice(){
     computerSelection = choices[Math.floor(Math.random() * choices.length)];
-    console.log(computerSelection);
 }
 
 getComputerChoice(choices);
 
-let userSelection = prompt('Choose Your Weapon')
-
-console.log(userSelection)
+let rawUserSelection = prompt('Choose Your Weapon')
+let userSelection = rawUserSelection.toLowerCase()
+if (userSelection == 'scissor') userSelection = 'scissors'
 
 function evaluate(computerSelection, userSelection){
     if (userSelection == 'rock'){
@@ -30,7 +29,7 @@ function evaluate(computerSelection, userSelection){
         else if (computerSelection == 'paper'){
             alert('Computer picks paper \n \nLet\'s Call it a Draw')
         }
-        else alert('Computer picks scissor \n \nLol get rekt')
+        else alert('Computer picks scissors \n \nLol get rekt')
     }
 
     else if (userSelection == 'scissors'){
