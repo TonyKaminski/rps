@@ -7,8 +7,7 @@ function getComputerChoice(){
 }
 
 function getUserChoice(){
-    let rawUserSelection = prompt('Choose Your Weapon')
-    userSelection = rawUserSelection.toLowerCase()
+        userSelection = prompt('Choose Your Weapon').toLowerCase()
     if (userSelection == 'scissor') userSelection = 'scissors'
 }
 
