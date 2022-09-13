@@ -17,6 +17,7 @@ function getUserChoice(){
 function evaluate(){
     if (userSelection == 'rock'){
         if (computerSelection == 'rock'){
+            score = 'You - ' + userScore + '; Evil Robot - ' + computerScore
             alert('Computer picks rock \n \nLet\'s Call it a Draw')
         }
         else if (computerSelection == 'paper'){
@@ -35,6 +36,7 @@ function evaluate(){
             alert('Computer picks rock \n \nFucking Legend')
         }
         else if (computerSelection == 'paper'){
+            score = 'You - ' + userScore + '; Evil Robot - ' + computerScore
             alert('Computer picks paper \n \nLet\'s Call it a Draw')
         }
         else{
@@ -52,7 +54,10 @@ function evaluate(){
             score = 'You - ' + ++userScore + '; Evil Robot - ' + computerScore
             alert('Computer picks paper \n \nFucking Legend')
         }
-        else alert('Computer picks scissors \n \nLet\'s Call it a Draw')
+        else {
+            score = 'You - ' + userScore + '; Evil Robot - ' + computerScore
+            alert('Computer picks scissors \n \nLet\'s Call it a Draw')
+             }
     }
 
     else {
