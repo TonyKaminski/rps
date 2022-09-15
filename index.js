@@ -21,18 +21,21 @@ function evaluate(){
             alert('Computer picks rock \n \nLet\'s Call it a Draw')
         }
         else if (computerSelection == 'paper'){
-            score = 'You - ' + userScore + '; Evil Robot - ' + ++computerScore
+            ++computerScore
+            score = 'You - ' + userScore + '; Evil Robot - ' + computerScore
             alert('Computer picks paper \n \nLol get rekt')
         }
         else {
-            score = 'You - ' + ++userScore + '; Evil Robot - ' + computerScore
+            ++userScore
+            score = 'You - ' + userScore + '; Evil Robot - ' + computerScore
             alert('Computer picks scissors \n \nFucking Legend')
         }
     }
     
     else if (userSelection == 'paper'){
         if (computerSelection == 'rock'){
-            score = 'You - ' + ++userScore + '; Evil Robot - ' + computerScore
+            ++userScore
+            score = 'You - ' + userScore + '; Evil Robot - ' + computerScore
             alert('Computer picks rock \n \nFucking Legend')
         }
         else if (computerSelection == 'paper'){
@@ -40,18 +43,21 @@ function evaluate(){
             alert('Computer picks paper \n \nLet\'s Call it a Draw')
         }
         else{
-            score = 'You - ' + userScore + '; Evil Robot - ' + ++computerScore
+            ++computerScore
+            score = 'You - ' + userScore + '; Evil Robot - ' + computerScore
             alert('Computer picks scissors \n \nLol get rekt')
         }
     }
 
     else if (userSelection == 'scissors'){
         if (computerSelection == 'rock'){
-            score = 'You - ' + userScore + '; Evil Robot - ' + ++computerScore
+            ++computerScore
+            score = 'You - ' + userScore + '; Evil Robot - ' + computerScore
             alert('Computer picks rock \n \nLol get rekt')
         }
         else if (computerSelection == 'paper'){
-            score = 'You - ' + ++userScore + '; Evil Robot - ' + computerScore
+            ++userScore
+            score = 'You - ' + userScore + '; Evil Robot - ' + computerScore
             alert('Computer picks paper \n \nFucking Legend')
         }
         else {
@@ -72,8 +78,17 @@ function playRound(){
     alert(score)
 }
 
-playRound()
+function playGame(){
+    let i = 0
+    while (i < 5){
+        ++i
+        console.log(i)
+        playRound()
+    }
+}
 
-console.log(computerScore)
+playGame()
+
 console.log(userScore)
+console.log(computerScore)
 console.log(score)
